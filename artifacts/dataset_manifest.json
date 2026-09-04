@@ -1,0 +1,7 @@
+{
+  "source": "hotpot_dev_distractor_v1.json",
+  "sample_size": 300,
+  "random_seed": 42,
+  "document_id": "title",
+  "corpus_scope": "contexts of sampled questions"
+}
