@@ -1,0 +1,41 @@
+{
+  "multi_hop_bridging_failure": {
+    "count": 14,
+    "percentage_of_failures": 33.33,
+    "methods_affected": [
+      "bm25",
+      "dense",
+      "hybrid"
+    ],
+    "definition": "The query requires reasoning across multiple documents, but one of the gold documents (typically the second hop) is not mentioned and cannot be semantically matched from the query text alone without first retrieving and reading the bridge document."
+  },
+  "topical_distraction_and_semantic_drift": {
+    "count": 10,
+    "percentage_of_failures": 23.81,
+    "methods_affected": [
+      "bm25",
+      "dense",
+      "hybrid"
+    ],
+    "definition": "The corpus contains multiple competing documents in the same broad topical domain, genre, or series (e.g. other Olympic competitions, other musical albums or songs by the same artist, or same-category entities) that outrank the true gold target."
+  },
+  "lexical_and_syntactic_mismatch": {
+    "count": 6,
+    "percentage_of_failures": 14.29,
+    "methods_affected": [
+      "bm25",
+      "dense",
+      "hybrid"
+    ],
+    "definition": "The query uses vocabulary, paraphrasing, phonetic descriptions, or informal formulations (including spelling errors or descriptive aliases) that fail to match the formal lexical terms in the gold document, heavily penalizing exact keyword matching."
+  },
+  "entity_confusion_and_partial_overlap": {
+    "count": 12,
+    "percentage_of_failures": 28.57,
+    "methods_affected": [
+      "bm25",
+      "hybrid"
+    ],
+    "definition": "A distractor document contains partial or verbatim overlap with entity names or keywords in the query (such as shared namesake substrings, adaptations across media, or namesake locations) and outranks the specific target entity document."
+  }
+}
