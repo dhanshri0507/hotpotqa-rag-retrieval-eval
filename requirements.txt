@@ -1,0 +1,8 @@
+# Python 3.10+
+# Pinned versions for reproducibility
+rank-bm25==0.2.2
+sentence-transformers==2.7.0
+faiss-cpu==1.15.0
+numpy==1.26.4
+pyyaml==6.0.2
+torch>=2.0.0

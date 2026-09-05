@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Raw downloaded dataset (download instructions in README)
+data/
+
+# Cached corpus embeddings
+embeddings/
+
+# Virtual environments
+venv/
+.venv/
+env/

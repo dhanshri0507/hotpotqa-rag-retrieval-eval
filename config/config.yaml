@@ -1,0 +1,45 @@
+# ============================================================
+# config.yaml — Single source of truth for all experiment parameters
+# ============================================================
+# Every retrieval and evaluation script reads from this file.
+# Do not hardcode these values elsewhere.
+
+random_seed: 42
+
+# --- BM25 parameters (standard literature defaults, not tuned) ---
+bm25:
+  k1: 1.5
+  b: 0.75
+
+# --- Dense retrieval parameters ---
+embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+embedding_dim: 384
+
+# --- Hybrid / RRF parameters ---
+top_k_for_fusion: 100
+rrf_k: 60
+
+# --- Evaluation parameters ---
+eval_k_values: [1, 5, 10]
+ndcg_k: 10
+
+# --- Artifact paths (frozen dataset, read-only) ---
+artifact_paths:
+  sampled_questions: "artifacts/sampled_questions.json"
+  corpus: "artifacts/corpus.jsonl"
+  qrels: "artifacts/qrels.json"
+
+# --- Output paths ---
+output_paths:
+  bm25_rankings: "results/bm25_rankings.jsonl"
+  dense_rankings: "results/dense_rankings.jsonl"
+  hybrid_rankings: "results/hybrid_rankings.jsonl"
+  metrics_overall: "results/metrics_overall.json"
+  metrics_by_question_type: "results/metrics_by_question_type.json"
+  comparison_table: "results/comparison_table.csv"
+  query_level_results: "results/query_level_results.jsonl"
+
+# --- Embedding cache paths ---
+embedding_paths:
+  corpus_embeddings: "embeddings/corpus_embeddings.npy"
+  doc_ids: "embeddings/doc_ids.json"
