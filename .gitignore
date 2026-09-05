@@ -5,9 +5,6 @@ __pycache__/
 # Raw downloaded dataset (download instructions in README)
 data/
 
-# Cached corpus embeddings
-embeddings/
-
 # Virtual environments
 venv/
 .venv/
