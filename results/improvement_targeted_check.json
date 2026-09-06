@@ -1,0 +1,316 @@
+[
+  {
+    "question_id": "5a721a7655429971e9dc9271",
+    "question": "What actor from the show Murphy Brown also had a role in a show with fellow actor Steve Howey? ",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25"
+    ],
+    "gold_doc_ids": [
+      "Reba (season 1)",
+      "Christopher Rich (actor)"
+    ],
+    "both_gold_in_top10": false,
+    "at_least_one_gold_in_top10": false,
+    "resolved": false,
+    "improved_gold_ranks": {
+      "Reba (season 1)": null,
+      "Christopher Rich (actor)": 14
+    },
+    "improved_top10_doc_ids": [
+      "Johnny Brown (actor)",
+      "Jay Thomas",
+      "Doug Dale",
+      "Shawn Harrison (actor)",
+      "Everett Greenbaum",
+      "Nick Offerman",
+      "The Oldest Man (character)",
+      "Jaleel White",
+      "Grizz Chapman",
+      "Nick Zano"
+    ]
+  },
+  {
+    "question_id": "5a7344e95542991f9a20c6ce",
+    "question": "What song was number 4 on the charts when a song from FutureSex/LoveSounds was number 1?",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25",
+      "dense",
+      "hybrid"
+    ],
+    "gold_doc_ids": [
+      "Rudebox (song)",
+      "SexyBack"
+    ],
+    "both_gold_in_top10": false,
+    "at_least_one_gold_in_top10": true,
+    "resolved": false,
+    "improved_gold_ranks": {
+      "Rudebox (song)": 34,
+      "SexyBack": 4
+    },
+    "improved_top10_doc_ids": [
+      "FutureSex/LoveSound",
+      "Between Now and Forever",
+      "Dead and Gone",
+      "SexyBack",
+      "She Is Love (Parachute song)",
+      "Galveston (song)",
+      "Love Me Like You Used To (song)",
+      "Can We Talk",
+      "Love Stinks (song)",
+      "Let There Be Love (1953 Joni James album)"
+    ]
+  },
+  {
+    "question_id": "5a89bbb05542992e4fca83a3",
+    "question": "What star of Parks and Recreation appeared in November?",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25"
+    ],
+    "gold_doc_ids": [
+      "November (2004 film)",
+      "Nick Offerman"
+    ],
+    "both_gold_in_top10": false,
+    "at_least_one_gold_in_top10": true,
+    "resolved": false,
+    "improved_gold_ranks": {
+      "November (2004 film)": 44,
+      "Nick Offerman": 2
+    },
+    "improved_top10_doc_ids": [
+      "Donna Meagle",
+      "Nick Offerman",
+      "The Camel (Parks and Recreation)",
+      "End of the World (Parks and Recreation)",
+      "Billy Eichner",
+      "Andy Milder",
+      "Welcome to the Family (TV series)",
+      "Candace Flynn",
+      "Pioneer Park (Fairbanks, Alaska)",
+      "Treehouse of Horror XXII"
+    ]
+  },
+  {
+    "question_id": "5a8cfa2e554299585d9e378b",
+    "question": "What career did the British actor born in 1965  and star of Lock, Stock and Two Smoking Barrels have before acting?",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25",
+      "hybrid"
+    ],
+    "gold_doc_ids": [
+      "Lock, Stock and Two Smoking Barrels",
+      "Vinnie Jones"
+    ],
+    "both_gold_in_top10": false,
+    "at_least_one_gold_in_top10": true,
+    "resolved": false,
+    "improved_gold_ranks": {
+      "Lock, Stock and Two Smoking Barrels": 4,
+      "Vinnie Jones": 56
+    },
+    "improved_top10_doc_ids": [
+      "Alan Ford (actor)",
+      "Stephen Marcus",
+      "Steven Mackintosh",
+      "Lock, Stock and Two Smoking Barrels",
+      "Nick Moran",
+      "Del Synnott",
+      "Frank Harper",
+      "Lock, Stock...",
+      "Dexter Fletcher",
+      "Timothy Olyphant"
+    ]
+  },
+  {
+    "question_id": "5a8dee2455429917b4a5bce1",
+    "question": "What other film did the star of 127 Hours act in?",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25"
+    ],
+    "gold_doc_ids": [
+      "127 Hours",
+      "James Franco"
+    ],
+    "both_gold_in_top10": true,
+    "at_least_one_gold_in_top10": true,
+    "resolved": true,
+    "improved_gold_ranks": {
+      "127 Hours": 2,
+      "James Franco": 3
+    },
+    "improved_top10_doc_ids": [
+      "List of accolades received by 127 Hours",
+      "127 Hours",
+      "James Franco",
+      "Treehouse of Horror XXII",
+      "Danny Boyle",
+      "Aron Ralston",
+      "Timothy Olyphant",
+      "The Keeping Hours",
+      "Coal Mines Regulation Act 1908",
+      "Timecode (film)"
+    ]
+  },
+  {
+    "question_id": "5a8f503c5542992414482a34",
+    "question": "The Prodigal Daughter, though a book about an American, is by a novelist of what nationality?",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25"
+    ],
+    "gold_doc_ids": [
+      "The Prodigal Daughter",
+      "Jeffrey Archer"
+    ],
+    "both_gold_in_top10": false,
+    "at_least_one_gold_in_top10": true,
+    "resolved": false,
+    "improved_gold_ranks": {
+      "The Prodigal Daughter": 2,
+      "Jeffrey Archer": 76
+    },
+    "improved_top10_doc_ids": [
+      "Michèle Roberts",
+      "The Prodigal Daughter",
+      "The Prodigal Judge",
+      "What's So Amazing About Grace?",
+      "Further Chronicles of Avonlea",
+      "Ezekiel 16",
+      "Joanna Russ",
+      "Bridge to Terabithia (novel)",
+      "Prodigal Daughter (Star Trek: Deep Space Nine)",
+      "Black Book (novel)"
+    ]
+  },
+  {
+    "question_id": "5ab4304a55429942dd415ec5",
+    "question": "To where did the war criminal who is the fictional defendant in the film After the Truth flee in real life ?",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25"
+    ],
+    "gold_doc_ids": [
+      "After the Truth",
+      "Josef Mengele"
+    ],
+    "both_gold_in_top10": true,
+    "at_least_one_gold_in_top10": true,
+    "resolved": true,
+    "improved_gold_ranks": {
+      "After the Truth": 3,
+      "Josef Mengele": 4
+    },
+    "improved_top10_doc_ids": [
+      "Theodor Szehinskyj",
+      "Music Box (film)",
+      "After the Truth",
+      "Josef Mengele",
+      "Karl-Heinz Schnibbe",
+      "Případy 1. oddělení",
+      "Michael Fassbender filmography",
+      "Reunion (1989 film)",
+      "Nuremberg Trials (film)",
+      "La Soufrière (film)"
+    ]
+  },
+  {
+    "question_id": "5abc030e554299642a094bdc",
+    "question": "The Distribution of Industry act was passed by a man who was prime minister when? ",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25"
+    ],
+    "gold_doc_ids": [
+      "Distribution of Industry Act 1950",
+      "Clement Attlee"
+    ],
+    "both_gold_in_top10": true,
+    "at_least_one_gold_in_top10": true,
+    "resolved": true,
+    "improved_gold_ranks": {
+      "Distribution of Industry Act 1950": 5,
+      "Clement Attlee": 6
+    },
+    "improved_top10_doc_ids": [
+      "Honours (Prevention of Abuses) Act 1925",
+      "Industry Act 1975",
+      "Prime Minister of Northern Ireland",
+      "Factories Act 1847",
+      "Distribution of Industry Act 1950",
+      "Clement Attlee",
+      "Coal Mines Regulation Act 1908",
+      "Reindeer Act",
+      "Deputy prime minister",
+      "Letters of last resort"
+    ]
+  },
+  {
+    "question_id": "5abc19705542993a06baf86e",
+    "question": "Black Book starred the actress and writer of what heritage?",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25",
+      "hybrid"
+    ],
+    "gold_doc_ids": [
+      "Black Book (film)",
+      "Halina Reijn"
+    ],
+    "both_gold_in_top10": false,
+    "at_least_one_gold_in_top10": true,
+    "resolved": false,
+    "improved_gold_ranks": {
+      "Black Book (film)": 10,
+      "Halina Reijn": 50
+    },
+    "improved_top10_doc_ids": [
+      "Black Book (novel)",
+      "List of Black Books characters",
+      "Black Power: The Politics of Liberation",
+      "Black Book (World War II)",
+      "Etheridge Knight",
+      "African-American bookstores",
+      "The Wild Pony",
+      "Books of Clanranald",
+      "Black Arts Movement",
+      "Black Book (film)"
+    ]
+  },
+  {
+    "question_id": "5ac2d85e55429921a00ab06b",
+    "question": "Where did the hijacked plane rammed by Heather Penney crash? ",
+    "type": "bridge",
+    "baseline_methods_failed": [
+      "bm25"
+    ],
+    "gold_doc_ids": [
+      "Heather Penney",
+      "United Airlines Flight 93"
+    ],
+    "both_gold_in_top10": true,
+    "at_least_one_gold_in_top10": true,
+    "resolved": true,
+    "improved_gold_ranks": {
+      "Heather Penney": 3,
+      "United Airlines Flight 93": 4
+    },
+    "improved_top10_doc_ids": [
+      "Omar Rezaq",
+      "LeRoy W. Homer Jr. Foundation",
+      "Heather Penney",
+      "United Airlines Flight 93",
+      "Pan Am Flight 73",
+      "The plane crash (Neighbours)",
+      "Lynyrd Skynyrd Tribute Tour",
+      "Andy Tyson",
+      "American Airlines Flight 157",
+      "El Al Flight 253 attack"
+    ]
+  }
+]

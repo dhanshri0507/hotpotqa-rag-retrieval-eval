@@ -1,5 +1,5 @@
 # ============================================================
-# config.yaml — Single source of truth for all experiment parameters
+# config.yaml - Single source of truth for all experiment parameters
 # ============================================================
 # Every retrieval and evaluation script reads from this file.
 # Do not hardcode these values elsewhere.
@@ -23,6 +23,12 @@ rrf_k: 60
 eval_k_values: [1, 5, 10]
 ndcg_k: 10
 
+# --- Targeted Improvement parameters ---
+improvement:
+  hop1_top_n: 3
+  expansion_source: "full_text"   # concatenate full paragraph text of top hop1_top_n docs
+  # Reuses existing bm25 (k1, b), embedding_model, and rrf_k parameters
+
 # --- Artifact paths (frozen dataset, read-only) ---
 artifact_paths:
   sampled_questions: "artifacts/sampled_questions.json"
@@ -38,6 +44,13 @@ output_paths:
   metrics_by_question_type: "results/metrics_by_question_type.json"
   comparison_table: "results/comparison_table.csv"
   query_level_results: "results/query_level_results.jsonl"
+  improved_rankings: "results/improved_rankings.jsonl"
+  metrics_overall_improved: "results/metrics_overall_improved.json"
+  metrics_by_question_type_improved: "results/metrics_by_question_type_improved.json"
+  comparison_table_with_improved: "results/comparison_table_with_improved.csv"
+  query_level_results_improved: "results/query_level_results_improved.jsonl"
+  improvement_targeted_check: "results/improvement_targeted_check.json"
+  improvement_new_failures: "results/improvement_new_failures.json"
 
 # --- Embedding cache paths ---
 embedding_paths:

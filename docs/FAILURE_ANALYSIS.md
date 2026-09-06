@@ -30,7 +30,7 @@ Qualitative analysis of all 42 failure records revealed four distinct recurring 
 
 - Definition: The query requires multi-hop reasoning across two documents, but the second gold document is completely unmentioned in the query text and cannot be matched directly without first identifying and reading the primary bridge document.
 - Frequency: 14 cases (33.33% of all failure instances).
-- Methods Affected: BM25 (9 cases), Hybrid (3 cases), Dense (2 cases).
+- Methods Affected: BM25 (10 cases), Hybrid (3 cases), Dense (1 case).
 - Representative Examples:
   - Query ID: 5abc19705542993a06baf86e (BM25, Hybrid)
     - Question: "Black Book starred the actress and writer of what heritage?"

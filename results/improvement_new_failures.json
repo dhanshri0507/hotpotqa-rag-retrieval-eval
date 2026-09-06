@@ -1,0 +1,28 @@
+[
+  {
+    "question_id": "5ae497f15542995ad6573db8",
+    "question": "What NIFL Premier Intermediate League team did Sean Connor play for?",
+    "type": "bridge",
+    "gold_doc_ids": [
+      "Sean Connor",
+      "Lisburn Distillery F.C."
+    ],
+    "improved_gold_ranks": {
+      "Sean Connor": 17,
+      "Lisburn Distillery F.C.": 11
+    },
+    "improved_top10_doc_ids": [
+      "Northern Ireland Intermediate League",
+      "Donegal Celtic F.C.",
+      "NIFL Premier Intermediate League",
+      "Sport &amp; Leisure Swifts F.C.",
+      "Northern Ireland Football League",
+      "Queen's University Belfast A.F.C.",
+      "Newington Youth F.C.",
+      "Cork City F.C.",
+      "Stoke City F.C. Under-23s and Academy",
+      "Portstewart F.C."
+    ],
+    "likely_cause": "Hop-1 distractor text diluted original query keywords, causing query drift away from true gold target."
+  }
+]
