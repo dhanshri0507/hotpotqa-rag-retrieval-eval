@@ -107,7 +107,7 @@ The dataset artifacts are frozen in `artifacts/`. To verify deterministic recons
 ```bash
 python build_dataset.py
 ```
-Samples 300 questions (seed 42), builds the 2,988-document corpus, validates 9 sanity checks, and records MD5 manifests.
+Samples 300 questions (seed 42), builds the 2,988-document corpus, validates 9 sanity checks, and records the source-data hash and dataset counts in dataset_manifest.json.
 
 ### Step 2: BM25 Sparse Retrieval
 ```bash
