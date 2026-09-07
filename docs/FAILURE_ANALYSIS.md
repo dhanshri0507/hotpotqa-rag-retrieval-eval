@@ -122,20 +122,21 @@ Qualitative analysis of all 42 failure records revealed four distinct recurring 
 
 ---
 
-## 3. Comparison to Pre-Registered Hypothesis H2
+### 3. Evaluation of Pre-Registered Hypothesis H2 (RQ2)
 
-RESEARCH_PLAN.md formulated Hypothesis 2 prior to running experiments, predicting four failure categories:
-1. Lexical mismatch
-2. Multi-hop bridging failure
-3. Semantic drift / topical distraction
-4. Entity confusion
+In RESEARCH_PLAN.md, Hypothesis 2 formulated explicit predictions regarding failure modes and differential method vulnerability prior to running experiments:
 
-### Hypothesis Verification:
-- All four hypothesized failure categories were confirmed by the empirical evidence.
+> **Prediction (H2):** BM25, Dense, and Hybrid retrieval will show different failure patterns, and these patterns will fall into at least four distinct categories (Lexical Mismatch, Multi-Hop Bridging Failure, Topical Distraction, Entity Confusion), each affecting retrieval methods differently based on their underlying scoring mechanisms.
+
+### Hypothesis Status: Supported
+
+### Detailed Verification Findings:
+- All four hypothesized failure categories were confirmed by the empirical evidence across the 42 failure instances at Recall@5 = 0.
 - Distribution of Observed Failures:
-  - Multi-hop bridging failure proved to be the largest category (33.33%), confirming the hypothesis that neither BM25 nor Dense can effectively reason across hops from the query text alone.
-  - Entity confusion (28.57%) and topical distraction (23.81%) accounted for more than half of all failure cases combined.
-  - Lexical mismatch accounted for 14.29% of cases.
+  - Multi-Hop Bridging Failure: Confirmed as the largest category (14 cases, 33.33%), confirming that neither BM25 nor Dense can effectively reason across multiple hops from the raw prompt alone. Affected all three methods (BM25: 10, Hybrid: 3, Dense: 1).
+  - Entity Confusion: Confirmed (12 cases, 28.57%), primarily penalizing BM25 (9 cases) and Hybrid (3 cases) where substring or namesake matches dominated scoring.
+  - Topical Distraction: Confirmed (10 cases, 23.81%), where candidate passages about sibling events crowded the top ranks. Dense retrieval was particularly vulnerable (4 of its 6 failures).
+  - Lexical Mismatch: Confirmed (6 cases, 14.29%), heavily concentrated in BM25 (4 of 6 cases) due to exact matching limitations.
 
 ### Unanticipated Emergent Findings:
 1. Complete Second-Hop Invisibility: While H2 anticipated that second-hop documents would look "weakly related," the empirical data showed that in multiple instances (e.g. 5abc19705542993a06baf86e), the second gold document title and text share literally zero substantive tokens with the query.

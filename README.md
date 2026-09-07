@@ -176,10 +176,19 @@ python -m src.evaluate_improvement
 
 - **[RESEARCH_PLAN.md](RESEARCH_PLAN.md)**: Pre-registered experimental plan, research questions (RQ1 to RQ4), hypotheses (H1 to H4), and risk analysis.
 - **[RESULTS.md](RESULTS.md)**: Detailed report of baseline experimental metrics and query-level overlap statistics.
-- **[ANALYSIS.md](ANALYSIS.md)**: Baseline interpretation analyzing why Dense outperforms Hybrid at Rank 1 and why Comparison questions show a wide performance gap.
-- **[docs/FAILURE_ANALYSIS.md](docs/FAILURE_ANALYSIS.md)**: Systematic failure taxonomy (Multi-Hop Bridging, Entity Confusion, Topical Distraction, Lexical Mismatch) with concrete query case studies.
-- **[docs/IMPROVEMENT.md](docs/IMPROVEMENT.md)**: Pre-registered design document for iterative hybrid retrieval with query expansion.
-- **[docs/IMPROVEMENT_ANALYSIS.md](docs/IMPROVEMENT_ANALYSIS.md)**: Evaluation of the improvement, documenting the 40% bridging resolution rate and the precision-coverage trade-off.
+- **[ANALYSIS.md](ANALYSIS.md)**: Research hypothesis evaluations (H1, H2, H3, H4) and root-cause analysis (Dense vs. Hybrid at Rank 1, Comparison vs. Bridge performance gap).
+- **[docs/FAILURE_ANALYSIS.md](docs/FAILURE_ANALYSIS.md)**: Systematic failure taxonomy (Multi-Hop Bridging, Entity Confusion, Topical Distraction, Lexical Mismatch) with concrete query case studies and H2 evaluation.
+- **[docs/IMPROVEMENT.md](docs/IMPROVEMENT.md)**: Pre-registered design document for iterative hybrid retrieval with query expansion (H3 alignment).
+- **[docs/IMPROVEMENT_ANALYSIS.md](docs/IMPROVEMENT_ANALYSIS.md)**: Evaluation of the improvement, documenting the 40% bridging resolution rate, precision-coverage trade-off, and H3 evaluation.
+
+### Hypothesis Evaluation Summary
+
+| Hypothesis | Research Question | Predicted Outcome | Empirical Status | Primary Document Reference |
+| :--- | :--- | :--- | :---: | :--- |
+| **H1** | RQ1: Baseline Performance | Hybrid outperforms BM25 and Dense across all metrics | **Partially Supported** | [ANALYSIS.md](ANALYSIS.md) & [RESULTS.md](RESULTS.md) |
+| **H2** | RQ2: Failure Taxonomy | Failures fall into 4 distinct modes with differential method impact | **Supported** | [docs/FAILURE_ANALYSIS.md](docs/FAILURE_ANALYSIS.md) |
+| **H3** | RQ3: Targeted Improvement | Iterative expansion fixes bridging without hurting other metrics | **Partially Supported** | [docs/IMPROVEMENT_ANALYSIS.md](docs/IMPROVEMENT_ANALYSIS.md) |
+| **H4** | RQ4: Question Type Gap | Comparison questions exhibit a smaller BM25 vs. Dense gap | **Not Supported** | [ANALYSIS.md](ANALYSIS.md) & [RESULTS.md](RESULTS.md) |
 
 ---
 

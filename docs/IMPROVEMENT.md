@@ -2,9 +2,9 @@
 
 This document pre-registers the targeted retrieval improvement design for Research Question 3 (RQ3) prior to implementing or evaluating the code. In accordance with the scientific methodology established in RESEARCH_PLAN.md, this plan is committed before running any improvement experiments or observing any results.
 
-## 1. Targeted Failure Type
+## 1. Targeted Failure Type and Hypothesis 3 (H3)
 
-This intervention targets Multi-Hop Bridging Failures (Second-Hop Invisibility), as defined in docs/FAILURE_ANALYSIS.md Section 2.1.
+This intervention directly tests **Hypothesis 3 (H3 / RQ3)** from RESEARCH_PLAN.md by targeting Multi-Hop Bridging Failures (Second-Hop Invisibility), as defined in docs/FAILURE_ANALYSIS.md Section 2.1.
 
 In the systematic baseline failure analysis, multi-hop bridging failure was identified as the single largest failure category, representing 14 of the 42 total failure instances (33.33%) across the union of failing queries at Recall@5 = 0. It affected all three baseline retrieval methods:
 - BM25: 10 failure cases
@@ -48,13 +48,16 @@ In HotpotQA multi-hop questions, while the second gold document title is absent 
 - By retrieving the first document at Hop 1 and appending its text to the query, the Hop 2 retrieval pass gains direct lexical overlap and semantic relatedness with the second gold document.
 - Fusing Hop 1 and Hop 2 ensures that documents highly ranked in both hops remain at the top, preventing the first gold document from being dropped while lifting the second gold document into the top 10.
 
-## 4. Expected Performance and Failure Behavior
+## 4. Alignment with Hypothesis 3 (H3) and Expected Performance
 
-### Primary Prediction:
+Hypothesis 3 in RESEARCH_PLAN.md states:
+> *"A targeted retrieval improvement designed from the observed failure analysis will improve performance specifically on the targeted failure type, and will improve overall Hybrid retrieval performance relative to the original, untuned Hybrid baseline, without meaningfully hurting other failure types."*
+
+### Primary Prediction (Targeted Type):
 - A measurable reduction in the count of Multi-Hop Bridging Failures among the 14 baseline failure cases identified in results/failure_taxonomy_mapping.json.
 - Specifically, we anticipate that queries where Hop 1 successfully ranked the primary bridge document in the top 3 will successfully surface the second gold document during Hop 2.
 
-### Secondary Prediction:
+### Secondary Prediction (Overall Performance):
 - Overall Recall@5 and Recall@10 are expected to improve or remain highly competitive relative to the baseline Hybrid model (0.9733 Recall@5, 0.9933 Recall@10).
 
 ### Explicit Failure Trade-Offs and Risks:

@@ -30,6 +30,7 @@ Below are the aggregate performance metrics across all 300 evaluation questions:
 1. Dense retrieval achieves the highest Recall@1 (0.8333) and highest nDCG@10 (0.7726).
 2. Hybrid retrieval achieves the highest overall Recall@10 (0.9933), successfully surfacing gold documents in 298 out of 300 questions.
 3. BM25 performs respectably at Recall@10 (0.9733) but struggles significantly at top ranks (Recall@1 = 0.6933, nDCG@10 = 0.6894).
+4. **Hypothesis 1 (H1) Linkage:** These data partially support H1: Hybrid achieves peak Recall@10 coverage, but Dense dominates top-rank precision (Recall@1 and nDCG@10). Full root-cause analysis is documented in ANALYSIS.md.
 
 ## 3. Results by Question Type
 
@@ -52,6 +53,7 @@ HotpotQA questions are categorized into two structural patterns:
 1. Comparison Questions: Dense retrieval shows outstanding performance, achieving 0.9348 Recall@1 and 1.0000 (perfect) Recall@5 and Recall@10. In contrast, BM25 drops sharply to 0.5435 Recall@1.
 2. Bridge Questions: The performance gap between BM25 (0.7205) and Dense (0.8150) is narrower (9.45% delta) than on comparison questions (39.13% delta).
 3. Hybrid Robustness: Hybrid retrieval achieves a perfect 1.0000 Recall@10 on comparison questions and 0.9921 on bridge questions, indicating strong coverage across both query types.
+4. **Hypothesis 4 (H4) Linkage:** These data directly refute H4. The BM25 vs. Dense Recall@1 gap on Comparison questions is 39.13%, more than 4x wider than on Bridge questions (9.45%). Full analysis is documented in ANALYSIS.md.
 
 ## 4. Method Agreement and Query Level Overlap
 

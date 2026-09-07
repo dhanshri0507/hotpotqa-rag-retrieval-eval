@@ -112,9 +112,27 @@ The primary trade-off of unselective query expansion is rank disruption. Appendi
 
 ---
 
-## 5. Comparison Against Pre-Registration Expectations
+## 5. Evaluation of Pre-Registered Hypothesis H3 (RQ3)
 
-In docs/IMPROVEMENT.md, several explicit predictions were made prior to implementation:
+In RESEARCH_PLAN.md, Hypothesis 3 established the pre-registered prediction for the targeted intervention:
+
+> **Prediction (H3):** A targeted retrieval improvement designed from the observed failure analysis will improve performance specifically on the targeted failure type, and will improve overall Hybrid retrieval performance relative to the original, untuned Hybrid baseline, without meaningfully hurting other failure types.
+
+### Hypothesis Status: Partially Supported
+
+### Detailed Verification Findings:
+1. **Targeted Failure Type Performance (Supported):**
+   - The two-step iterative hybrid method directly addressed Multi-Hop Bridging Failures (Second-Hop Invisibility).
+   - Across the 10 targeted bridging failure queries, 4 out of 10 (40.0%) were fully resolved with both gold documents retrieved in the top 10.
+   - In 9 out of 10 queries (90.0%), at least one gold document was brought into the top 10.
+2. **Overall Performance Relative to Baseline (Partially Supported):**
+   - Broad Coverage: Peak baseline Recall@10 was maintained at 0.9933 (298 of 300 queries retrieved).
+   - Top-Rank Precision: Aggregate Recall@1 declined from 0.7533 to 0.6533 (-10.00 percentage points) and nDCG@10 declined from 0.7581 to 0.7184 (-0.0397), failing the prediction of broad aggregate improvement.
+3. **Preservation of Non-Targeted Performance (Not Supported):**
+   - Applying unselective query expansion across all queries introduced query drift on single-hop and already-accurate queries.
+   - Evaluated against all 300 queries, exactly 1 query that was universally successful across all three baselines at Recall@10 failed under the Improved Method (query 5ae497f15542995ad6573db8), demonstrating an unintended negative side effect.
+
+### Alignment with Detailed Pre-Registration Predictions:
 
 | Prediction in docs/IMPROVEMENT.md | Empirical Outcome | Verdict |
 | :--- | :--- | :---: |
