@@ -65,6 +65,8 @@ All experiments operate on a frozen benchmark of 300 questions (254 bridge, 46 c
 │   ├── failure_taxonomy_summary.json       # Per-category failure statistics
 │   ├── improvement_targeted_check.json     # Resolution audit for multi-hop bridging failures
 │   └── improvement_new_failures.json       # Audit of newly introduced retrieval failures
+├── scripts/
+│   └── reproduce_all.sh                    # Master reproduction script (all 8 steps)
 ├── build_dataset.py                        # Dataset construction script
 ├── RESEARCH_PLAN.md                        # Pre-registered experimental plan
 ├── RESULTS.md                              # Baseline results report
@@ -94,6 +96,11 @@ Installed packages include `rank-bm25`, `sentence-transformers`, `faiss-cpu`, `n
 ## Step-by-Step Reproduction Guide
 
 Execute all commands from the project root directory.
+
+> **Quick Reproduction:** Alternatively, you can run all 8 steps sequentially with a single command via the master reproduction script:
+> ```bash
+> bash scripts/reproduce_all.sh
+> ```
 
 ### Step 1: Dataset Construction (Optional: Already Built and Frozen)
 The dataset artifacts are frozen in `artifacts/`. To verify deterministic reconstruction:
@@ -179,6 +186,6 @@ python -m src.evaluate_improvement
 ## Reproducibility Guarantees
 
 1. **Deterministic Pipeline:** Random seed 42 freezes the 300 sampled questions. BM25, exact FAISS inner-product search, and RRF fusion contain zero stochastic elements.
-2. **Centralized Parameters:** All parameters live exclusively in `config/config.yaml`. No hardcoded values exist in the source code.
+2. **Centralized Parameters:** Retrieval and fusion parameters (BM25 k1/b, embedding model, RRF k, top-k values) are centralized in `config/config.yaml`. Dataset construction parameters (random_seed=42, sample_size=300) are fixed constants in `build_dataset.py`, documented in RESEARCH_PLAN.md Section 3.
 3. **Automated Sanity Checks:** Every script includes assertions that verify ranking completeness, absence of duplicates, and score monotonicity before saving.
-4. **Independent Execution:** Running the full sequence of commands from Step 1 to Step 8 reproduces bit-for-bit identical ranking files and metrics tables.
+4. **Reproducibility:** The repository provides frozen input artifacts, deterministic configuration, pinned dependencies, sanity checks, and a complete execution sequence for reproducing all reported experiments. Bit-for-bit reproduction has not been independently verified across different hardware/OS/BLAS environments; minor floating-point variation in dense embedding computation is possible across platforms, though this should not affect reported Recall/nDCG values at the precision reported.

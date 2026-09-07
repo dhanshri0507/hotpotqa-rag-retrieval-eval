@@ -143,7 +143,7 @@ def fuse_rankings_rrf(
     all_qids = set(ranking_a.keys()) | set(ranking_b.keys())
     fused = {}
 
-    for qid in all_qids:
+    for qid in sorted(all_qids):
         doc_scores: dict[str, float] = {}
 
         list_a = ranking_a.get(qid, [])[:top_k_for_fusion]

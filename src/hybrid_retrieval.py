@@ -45,7 +45,7 @@ def reciprocal_rank_fusion(
     all_qids = set(bm25_rankings.keys()) | set(dense_rankings.keys())
     fused = {}
 
-    for qid in all_qids:
+    for qid in sorted(all_qids):
         doc_scores: dict[str, float] = {}
 
         # BM25 contribution
